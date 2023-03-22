@@ -1,0 +1,62 @@
+Overview of all the compositionally biased regions from the file drosophila_7245.out: with 12765 regions
+
+Counter of all Biases Types from the 12765 compositionally biased regions
+[('SINGLE', 8907), ('WHOLE', 2223), ('MULTIPLE', 1635)]
+Counter of all Signatures from the 12765 compositionally biased regions
+[('{Q}', 5380), ('{P}', 4694), ('{H}', 1056), ('{QP}', 487), ('{PQ}', 437), ('{QH}', 346), ('{HQ}', 109), ('{HP}', 94), ('{PH}', 55), ('{QPH}', 32), ('{HPQ}', 25), ('{QHP}', 17), ('{PHQ}', 16), ('{HQP}', 13), ('{PQH}', 4)]
+Top 5 Residue Counts from the 12765 compositionally biased regions
+[('8', 448), ('9', 427), ('10', 419), ('12', 414), ('11', 381), ('13', 360), ('16', 294), ('15', 293), ('7', 290), ('18', 273)]
+
+Sequences with most biased regions up to range 10:
+################################################################################
+For sequence: tr|A0A0R1DWR5|A0A0R1DWR5_DROYA, there are 12 compositionally biased regions
+Biases: [('SINGLE', 9), ('WHOLE', 2), ('MULTIPLE', 1)]
+Signatures: [('{Q}', 5), ('{H}', 4), ('{P}', 2), ('{QP}', 1)]
+Residue Counts: [('162', 1), ('46', 1), ('291', 1), ('27', 1), ('9', 1), ('18', 1), ('6', 1), ('7', 1), ('8', 1), ('600', 1), ('362', 1), ('300', 1)]
+
+For sequence: tr|A0A0R1E1S9|A0A0R1E1S9_DROYA, there are 12 compositionally biased regions
+Biases: [('SINGLE', 9), ('WHOLE', 2), ('MULTIPLE', 1)]
+Signatures: [('{Q}', 5), ('{H}', 4), ('{P}', 2), ('{QP}', 1)]
+Residue Counts: [('162', 1), ('46', 1), ('289', 1), ('27', 1), ('9', 1), ('18', 1), ('6', 1), ('7', 1), ('8', 1), ('599', 1), ('362', 1), ('299', 1)]
+
+For sequence: tr|A0A0R1DWI1|A0A0R1DWI1_DROYA, there are 11 compositionally biased regions
+Biases: [('SINGLE', 8), ('WHOLE', 2), ('MULTIPLE', 1)]
+Signatures: [('{Q}', 5), ('{H}', 3), ('{P}', 2), ('{QP}', 1)]
+Residue Counts: [('162', 1), ('46', 1), ('281', 1), ('27', 1), ('9', 1), ('18', 1), ('6', 1), ('7', 1), ('589', 1), ('361', 1), ('290', 1)]
+
+For sequence: tr|B4PDB2|B4PDB2_DROYA, there are 11 compositionally biased regions
+Biases: [('SINGLE', 8), ('WHOLE', 2), ('MULTIPLE', 1)]
+Signatures: [('{Q}', 5), ('{H}', 3), ('{P}', 2), ('{QP}', 1)]
+Residue Counts: [('162', 1), ('46', 1), ('27', 1), ('280', 1), ('9', 1), ('18', 1), ('6', 1), ('7', 1), ('588', 1), ('361', 1), ('289', 1)]
+
+For sequence: tr|A0A0R1EJL6|A0A0R1EJL6_DROYA, there are 11 compositionally biased regions
+Biases: [('SINGLE', 7), ('MULTIPLE', 3), ('WHOLE', 1)]
+Signatures: [('{Q}', 4), ('{H}', 3), ('{QH}', 2), ('{P}', 1), ('{HP}', 1)]
+Residue Counts: [('14', 1), ('34', 1), ('12', 1), ('18', 1), ('21', 1), ('10', 1), ('9', 1), ('26', 1), ('32', 1), ('11', 1), ('138', 1)]
+
+For sequence: tr|A0A0R1EJI9|A0A0R1EJI9_DROYA, there are 10 compositionally biased regions
+Biases: [('SINGLE', 7), ('MULTIPLE', 2), ('WHOLE', 1)]
+Signatures: [('{Q}', 4), ('{P}', 2), ('{H}', 2), ('{PH}', 1), ('{QH}', 1)]
+Residue Counts: [('31', 1), ('23', 1), ('20', 1), ('17', 1), ('19', 1), ('8', 1), ('11', 1), ('40', 1), ('21', 1), ('193', 1)]
+
+For sequence: tr|A0A0R1EFF8|A0A0R1EFF8_DROYA, there are 10 compositionally biased regions
+Biases: [('SINGLE', 5), ('MULTIPLE', 3), ('WHOLE', 2)]
+Signatures: [('{Q}', 4), ('{P}', 3), ('{QP}', 2), ('{PQ}', 1)]
+Residue Counts: [('56', 1), ('88', 1), ('15', 1), ('12', 1), ('23', 1), ('80', 1), ('136', 1), ('11', 1), ('170', 1), ('163', 1)]
+
+For sequence: tr|B4Q285|B4Q285_DROYA, there are 10 compositionally biased regions
+Biases: [('SINGLE', 7), ('MULTIPLE', 2), ('WHOLE', 1)]
+Signatures: [('{Q}', 4), ('{P}', 2), ('{H}', 2), ('{PH}', 1), ('{QH}', 1)]
+Residue Counts: [('31', 1), ('23', 1), ('20', 1), ('17', 1), ('19', 1), ('8', 1), ('11', 1), ('40', 1), ('21', 1), ('171', 1)]
+
+For sequence: tr|A0A0R1E902|A0A0R1E902_DROYA, there are 9 compositionally biased regions
+Biases: [('SINGLE', 6), ('MULTIPLE', 2), ('WHOLE', 1)]
+Signatures: [('{Q}', 5), ('{P}', 1), ('{H}', 1), ('{QP}', 1), ('{QH}', 1)]
+Residue Counts: [('20', 2), ('96', 1), ('16', 1), ('14', 1), ('10', 1), ('13', 1), ('184', 1), ('174', 1)]
+
+For sequence: tr|B4P2A5|B4P2A5_DROYA, there are 9 compositionally biased regions
+Biases: [('SINGLE', 6), ('WHOLE', 2), ('MULTIPLE', 1)]
+Signatures: [('{P}', 3), ('{Q}', 3), ('{H}', 2), ('{PQ}', 1)]
+Residue Counts: [('8', 2), ('232', 1), ('156', 1), ('13', 1), ('31', 1), ('344', 1), ('393', 1), ('361', 1)]
+
+################################################################################

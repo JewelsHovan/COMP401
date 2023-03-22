@@ -1,0 +1,62 @@
+Overview of all the compositionally biased regions from the file drosophila_7244.out: with 11159 regions
+
+Counter of all Biases Types from the 11159 compositionally biased regions
+[('SINGLE', 7876), ('WHOLE', 2061), ('MULTIPLE', 1222)]
+Counter of all Signatures from the 11159 compositionally biased regions
+[('{Q}', 5696), ('{P}', 3558), ('{H}', 683), ('{QP}', 433), ('{PQ}', 369), ('{QH}', 182), ('{HP}', 70), ('{HQ}', 68), ('{PH}', 64), ('{QHP}', 10), ('{QPH}', 8), ('{HPQ}', 7), ('{PHQ}', 5), ('{HQP}', 4), ('{PQH}', 2)]
+Top 5 Residue Counts from the 11159 compositionally biased regions
+[('9', 528), ('11', 431), ('8', 418), ('10', 411), ('13', 377), ('12', 361), ('14', 291), ('17', 258), ('7', 255), ('15', 243)]
+
+Sequences with most biased regions up to range 10:
+################################################################################
+For sequence: tr|B4LU67|B4LU67_DROVI, there are 15 compositionally biased regions
+Biases: [('SINGLE', 12), ('WHOLE', 2), ('MULTIPLE', 1)]
+Signatures: [('{Q}', 7), ('{H}', 4), ('{P}', 3), ('{QP}', 1)]
+Residue Counts: [('16', 2), ('6', 2), ('329', 1), ('278', 1), ('27', 1), ('17', 1), ('39', 1), ('29', 1), ('9', 1), ('12', 1), ('548', 1), ('616', 1), ('431', 1)]
+
+For sequence: tr|B4LQ32|B4LQ32_DROVI, there are 10 compositionally biased regions
+Biases: [('SINGLE', 7), ('WHOLE', 2), ('MULTIPLE', 1)]
+Signatures: [('{Q}', 4), ('{P}', 4), ('{H}', 1), ('{QP}', 1)]
+Residue Counts: [('13', 2), ('17', 1), ('55', 1), ('9', 1), ('6', 1), ('8', 1), ('107', 1), ('188', 1), ('185', 1)]
+
+For sequence: tr|B4LHD0|B4LHD0_DROVI, there are 10 compositionally biased regions
+Biases: [('SINGLE', 6), ('MULTIPLE', 2), ('WHOLE', 2)]
+Signatures: [('{Q}', 6), ('{P}', 2), ('{PQ}', 1), ('{QP}', 1)]
+Residue Counts: [('265', 2), ('166', 1), ('17', 1), ('13', 1), ('11', 1), ('15', 1), ('8', 1), ('20', 1), ('246', 1)]
+
+For sequence: sp|B4LV24|AFFL_DROVI, there are 9 compositionally biased regions
+Biases: [('SINGLE', 7), ('WHOLE', 2)]
+Signatures: [('{Q}', 6), ('{P}', 3)]
+Residue Counts: [('73', 1), ('21', 1), ('23', 1), ('17', 1), ('54', 1), ('25', 1), ('7', 1), ('242', 1), ('138', 1)]
+
+For sequence: tr|A0A0Q9WJI5|A0A0Q9WJI5_DROVI, there are 9 compositionally biased regions
+Biases: [('SINGLE', 8), ('MULTIPLE', 1)]
+Signatures: [('{Q}', 4), ('{P}', 3), ('{H}', 1), ('{PQ}', 1)]
+Residue Counts: [('9', 2), ('31', 1), ('13', 1), ('10', 1), ('50', 1), ('6', 1), ('7', 1), ('75', 1)]
+
+For sequence: tr|B4LNR6|B4LNR6_DROVI, there are 9 compositionally biased regions
+Biases: [('SINGLE', 6), ('WHOLE', 2), ('MULTIPLE', 1)]
+Signatures: [('{Q}', 4), ('{P}', 3), ('{H}', 1), ('{QHP}', 1)]
+Residue Counts: [('145', 1), ('11', 1), ('15', 1), ('9', 1), ('10', 1), ('17', 1), ('33', 1), ('219', 1), ('142', 1)]
+
+For sequence: tr|B4LVG3|B4LVG3_DROVI, there are 9 compositionally biased regions
+Biases: [('SINGLE', 7), ('WHOLE', 2)]
+Signatures: [('{Q}', 4), ('{P}', 4), ('{H}', 1)]
+Residue Counts: [('19', 2), ('24', 1), ('20', 1), ('11', 1), ('10', 1), ('12', 1), ('209', 1), ('198', 1)]
+
+For sequence: tr|A0A0Q9W074|A0A0Q9W074_DROVI, there are 9 compositionally biased regions
+Biases: [('SINGLE', 6), ('WHOLE', 2), ('MULTIPLE', 1)]
+Signatures: [('{P}', 4), ('{Q}', 3), ('{H}', 1), ('{QP}', 1)]
+Residue Counts: [('123', 1), ('39', 1), ('40', 1), ('13', 1), ('9', 1), ('22', 1), ('194', 1), ('231', 1), ('133', 1)]
+
+For sequence: tr|A0A0Q9W075|A0A0Q9W075_DROVI, there are 9 compositionally biased regions
+Biases: [('SINGLE', 6), ('WHOLE', 2), ('MULTIPLE', 1)]
+Signatures: [('{P}', 4), ('{Q}', 3), ('{H}', 1), ('{QP}', 1)]
+Residue Counts: [('123', 1), ('39', 1), ('40', 1), ('13', 1), ('9', 1), ('22', 1), ('194', 1), ('233', 1), ('136', 1)]
+
+For sequence: tr|A0A0Q9WIY4|A0A0Q9WIY4_DROVI, there are 9 compositionally biased regions
+Biases: [('SINGLE', 6), ('WHOLE', 2), ('MULTIPLE', 1)]
+Signatures: [('{Q}', 5), ('{P}', 3), ('{QP}', 1)]
+Residue Counts: [('159', 1), ('31', 1), ('141', 1), ('149', 1), ('19', 1), ('34', 1), ('342', 1), ('872', 1), ('787', 1)]
+
+################################################################################

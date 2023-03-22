@@ -1,0 +1,62 @@
+Overview of all the compositionally biased regions from the file drosophila_7230.out: with 10853 regions
+
+Counter of all Biases Types from the 10853 compositionally biased regions
+[('SINGLE', 7791), ('WHOLE', 1918), ('MULTIPLE', 1144)]
+Counter of all Signatures from the 10853 compositionally biased regions
+[('{Q}', 5718), ('{P}', 3232), ('{H}', 759), ('{QP}', 379), ('{PQ}', 338), ('{QH}', 212), ('{HQ}', 88), ('{HP}', 60), ('{PH}', 25), ('{HPQ}', 17), ('{QPH}', 9), ('{PQH}', 5), ('{HQP}', 4), ('{PHQ}', 4), ('{QHP}', 3)]
+Top 5 Residue Counts from the 10853 compositionally biased regions
+[('9', 541), ('10', 458), ('11', 391), ('12', 386), ('8', 366), ('14', 313), ('15', 309), ('13', 294), ('18', 293), ('16', 267)]
+
+Sequences with most biased regions up to range 10:
+################################################################################
+For sequence: tr|B4KHF2|B4KHF2_DROMO, there are 15 compositionally biased regions
+Biases: [('SINGLE', 11), ('MULTIPLE', 2), ('WHOLE', 2)]
+Signatures: [('{Q}', 7), ('{P}', 3), ('{H}', 3), ('{QP}', 2)]
+Residue Counts: [('18', 2), ('16', 2), ('9', 2), ('284', 1), ('283', 1), ('25', 1), ('17', 1), ('6', 1), ('504', 1), ('22', 1), ('549', 1), ('435', 1)]
+
+For sequence: tr|B4L6K6|B4L6K6_DROMO, there are 11 compositionally biased regions
+Biases: [('SINGLE', 8), ('WHOLE', 2), ('MULTIPLE', 1)]
+Signatures: [('{Q}', 6), ('{P}', 4), ('{QP}', 1)]
+Residue Counts: [('49', 1), ('22', 1), ('17', 1), ('14', 1), ('37', 1), ('33', 1), ('20', 1), ('16', 1), ('39', 1), ('221', 1), ('158', 1)]
+
+For sequence: tr|A0A0Q9XQ56|A0A0Q9XQ56_DROMO, there are 10 compositionally biased regions
+Biases: [('SINGLE', 8), ('MULTIPLE', 1), ('WHOLE', 1)]
+Signatures: [('{Q}', 6), ('{P}', 3), ('{QP}', 1)]
+Residue Counts: [('49', 1), ('22', 1), ('17', 1), ('14', 1), ('37', 1), ('33', 1), ('20', 1), ('16', 1), ('39', 1), ('234', 1)]
+
+For sequence: tr|B4KWR2|B4KWR2_DROMO, there are 10 compositionally biased regions
+Biases: [('SINGLE', 7), ('WHOLE', 2), ('MULTIPLE', 1)]
+Signatures: [('{Q}', 7), ('{P}', 2), ('{QP}', 1)]
+Residue Counts: [('21', 1), ('24', 1), ('158', 1), ('16', 1), ('33', 1), ('10', 1), ('5', 1), ('263', 1), ('279', 1), ('269', 1)]
+
+For sequence: tr|A0A0Q9XEV8|A0A0Q9XEV8_DROMO, there are 10 compositionally biased regions
+Biases: [('SINGLE', 8), ('MULTIPLE', 1), ('WHOLE', 1)]
+Signatures: [('{Q}', 6), ('{P}', 3), ('{QP}', 1)]
+Residue Counts: [('48', 1), ('22', 1), ('17', 1), ('14', 1), ('37', 1), ('33', 1), ('20', 1), ('16', 1), ('39', 1), ('233', 1)]
+
+For sequence: tr|A0A0Q9XFG0|A0A0Q9XFG0_DROMO, there are 10 compositionally biased regions
+Biases: [('SINGLE', 7), ('WHOLE', 2), ('MULTIPLE', 1)]
+Signatures: [('{Q}', 5), ('{P}', 4), ('{QP}', 1)]
+Residue Counts: [('49', 1), ('22', 1), ('17', 1), ('37', 1), ('33', 1), ('20', 1), ('16', 1), ('39', 1), ('217', 1), ('161', 1)]
+
+For sequence: tr|B4KN60|B4KN60_DROMO, there are 10 compositionally biased regions
+Biases: [('SINGLE', 7), ('WHOLE', 2), ('MULTIPLE', 1)]
+Signatures: [('{P}', 4), ('{Q}', 4), ('{H}', 1), ('{QP}', 1)]
+Residue Counts: [('8', 2), ('16', 1), ('62', 1), ('78', 1), ('7', 1), ('5', 1), ('134', 1), ('219', 1), ('209', 1)]
+
+For sequence: tr|B4L7N8|B4L7N8_DROMO, there are 10 compositionally biased regions
+Biases: [('SINGLE', 7), ('WHOLE', 2), ('MULTIPLE', 1)]
+Signatures: [('{H}', 4), ('{P}', 3), ('{Q}', 2), ('{PH}', 1)]
+Residue Counts: [('13', 2), ('18', 1), ('21', 1), ('19', 1), ('23', 1), ('11', 1), ('40', 1), ('124', 1), ('111', 1)]
+
+For sequence: tr|A0A0Q9WYA4|A0A0Q9WYA4_DROMO, there are 9 compositionally biased regions
+Biases: [('SINGLE', 6), ('WHOLE', 2), ('MULTIPLE', 1)]
+Signatures: [('{Q}', 5), ('{P}', 3), ('{QP}', 1)]
+Residue Counts: [('93', 2), ('220', 1), ('9', 1), ('10', 1), ('44', 1), ('200', 1), ('432', 1), ('259', 1)]
+
+For sequence: tr|B4KX13|B4KX13_DROMO, there are 9 compositionally biased regions
+Biases: [('SINGLE', 6), ('WHOLE', 2), ('MULTIPLE', 1)]
+Signatures: [('{Q}', 5), ('{P}', 2), ('{H}', 1), ('{QP}', 1)]
+Residue Counts: [('160', 1), ('29', 1), ('259', 1), ('14', 1), ('8', 1), ('11', 1), ('561', 1), ('326', 1), ('281', 1)]
+
+################################################################################

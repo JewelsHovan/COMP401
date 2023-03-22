@@ -1,0 +1,7 @@
+ProteomeAnalysis:
+  directory_proteome_fastas: /path/to/proteome_fastas
+  annotation_directory: /path/to/annotation_directory
+  filtered_directory: /path/to/filtered_directory
+  directory_transcriptome_fastas: /path/to/transcriptome_fastas
+ProtScraper:
+  output_folder: /home/julienh/Desktop/COMP401/Transcriptome/Drosophila

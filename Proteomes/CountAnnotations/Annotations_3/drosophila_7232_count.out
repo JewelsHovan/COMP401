@@ -1,0 +1,62 @@
+Overview of all the compositionally biased regions from the file drosophila_7232.out: with 8677 regions
+
+Counter of all Biases Types from the 8677 compositionally biased regions
+[('SINGLE', 6076), ('WHOLE', 1748), ('MULTIPLE', 853)]
+Counter of all Signatures from the 8677 compositionally biased regions
+[('{Q}', 5041), ('{P}', 2145), ('{H}', 638), ('{QP}', 275), ('{PQ}', 211), ('{QH}', 197), ('{HQ}', 63), ('{HP}', 40), ('{PH}', 31), ('{QPH}', 12), ('{QHP}', 9), ('{PHQ}', 4), ('{HQP}', 4), ('{PQH}', 4), ('{HPQ}', 3)]
+Top 5 Residue Counts from the 8677 compositionally biased regions
+[('9', 394), ('10', 366), ('12', 330), ('8', 326), ('11', 324), ('13', 307), ('14', 257), ('16', 250), ('15', 242), ('17', 213)]
+
+Sequences with most biased regions up to range 10:
+################################################################################
+For sequence: tr|A0A484B8Z4|A0A484B8Z4_DRONA, there are 15 compositionally biased regions
+Biases: [('SINGLE', 11), ('MULTIPLE', 2), ('WHOLE', 2)]
+Signatures: [('{Q}', 6), ('{H}', 4), ('{P}', 3), ('{QP}', 2)]
+Residue Counts: [('409', 1), ('294', 1), ('32', 1), ('36', 1), ('18', 1), ('14', 1), ('15', 1), ('9', 1), ('22', 1), ('8', 1), ('29', 1), ('644', 1), ('24', 1), ('703', 1), ('476', 1)]
+
+For sequence: tr|A0A484BJL4|A0A484BJL4_DRONA, there are 11 compositionally biased regions
+Biases: [('SINGLE', 9), ('WHOLE', 2)]
+Signatures: [('{Q}', 6), ('{P}', 4), ('{H}', 1)]
+Residue Counts: [('27', 2), ('17', 1), ('65', 1), ('25', 1), ('6', 1), ('11', 1), ('5', 1), ('8', 1), ('213', 1), ('198', 1)]
+
+For sequence: tr|A0A484BXG6|A0A484BXG6_DRONA, there are 11 compositionally biased regions
+Biases: [('SINGLE', 8), ('WHOLE', 2), ('MULTIPLE', 1)]
+Signatures: [('{Q}', 8), ('{P}', 2), ('{QP}', 1)]
+Residue Counts: [('26', 1), ('17', 1), ('153', 1), ('51', 1), ('16', 1), ('10', 1), ('6', 1), ('9', 1), ('263', 1), ('285', 1), ('268', 1)]
+
+For sequence: tr|A0A484ARX0|A0A484ARX0_DRONA, there are 10 compositionally biased regions
+Biases: [('SINGLE', 6), ('MULTIPLE', 2), ('WHOLE', 2)]
+Signatures: [('{H}', 4), ('{Q}', 3), ('{P}', 1), ('{QH}', 1), ('{HP}', 1)]
+Residue Counts: [('41', 1), ('54', 1), ('14', 1), ('28', 1), ('22', 1), ('10', 1), ('82', 1), ('49', 1), ('173', 1), ('103', 1)]
+
+For sequence: tr|A0A484BEU8|A0A484BEU8_DRONA, there are 10 compositionally biased regions
+Biases: [('SINGLE', 6), ('MULTIPLE', 2), ('WHOLE', 2)]
+Signatures: [('{Q}', 4), ('{P}', 2), ('{H}', 2), ('{PQ}', 1), ('{QH}', 1)]
+Residue Counts: [('118', 1), ('14', 1), ('15', 1), ('17', 1), ('8', 1), ('12', 1), ('199', 1), ('29', 1), ('147', 1), ('122', 1)]
+
+For sequence: tr|A0A484BJA1|A0A484BJA1_DRONA, there are 10 compositionally biased regions
+Biases: [('SINGLE', 7), ('WHOLE', 2), ('MULTIPLE', 1)]
+Signatures: [('{P}', 4), ('{Q}', 3), ('{H}', 2), ('{PQ}', 1)]
+Residue Counts: [('262', 1), ('31', 1), ('123', 1), ('11', 1), ('25', 1), ('7', 1), ('8', 1), ('193', 1), ('398', 1), ('258', 1)]
+
+For sequence: tr|A0A484AVB9|A0A484AVB9_DRONA, there are 9 compositionally biased regions
+Biases: [('SINGLE', 6), ('WHOLE', 2), ('MULTIPLE', 1)]
+Signatures: [('{Q}', 5), ('{P}', 3), ('{QP}', 1)]
+Residue Counts: [('237', 1), ('100', 1), ('90', 1), ('9', 1), ('10', 1), ('44', 1), ('199', 1), ('451', 1), ('258', 1)]
+
+For sequence: tr|A0A484B0S9|A0A484B0S9_DRONA, there are 9 compositionally biased regions
+Biases: [('SINGLE', 6), ('MULTIPLE', 2), ('WHOLE', 1)]
+Signatures: [('{Q}', 5), ('{H}', 2), ('{HQ}', 2)]
+Residue Counts: [('24', 1), ('38', 1), ('16', 1), ('12', 1), ('9', 1), ('10', 1), ('26', 1), ('23', 1), ('135', 1)]
+
+For sequence: tr|A0A484AY37|A0A484AY37_DRONA, there are 9 compositionally biased regions
+Biases: [('SINGLE', 7), ('MULTIPLE', 1), ('WHOLE', 1)]
+Signatures: [('{Q}', 5), ('{P}', 2), ('{H}', 1), ('{QHP}', 1)]
+Residue Counts: [('10', 2), ('20', 1), ('48', 1), ('14', 1), ('9', 1), ('8', 1), ('101', 1), ('136', 1)]
+
+For sequence: tr|A0A484BP60|A0A484BP60_DRONA, there are 9 compositionally biased regions
+Biases: [('SINGLE', 7), ('MULTIPLE', 1), ('WHOLE', 1)]
+Signatures: [('{Q}', 6), ('{P}', 1), ('{H}', 1), ('{QP}', 1)]
+Residue Counts: [('25', 2), ('16', 1), ('18', 1), ('85', 1), ('9', 1), ('7', 1), ('158', 1), ('306', 1)]
+
+################################################################################
