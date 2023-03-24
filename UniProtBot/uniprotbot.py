@@ -15,7 +15,7 @@ class UniProtBot:
     - Prot Scraper to scrape proteome/transcriptome from a search keyword (organism, species, protein)
     """
 
-    def __init__(self, config = "configs/config.yaml"):
+    def __init__(self, config = "./configs/config.yaml"):
         self.config = config
         self.config_dict = self.load_config()
 
