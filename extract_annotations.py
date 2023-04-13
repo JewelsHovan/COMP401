@@ -5,9 +5,14 @@ from Bio import SeqIO
 
 # Define the folder containing the annotated files
 # List all annotated files in the folder
-folder = "Proteomes\Annotated_3"
+print(os.getcwd())
+folder = "Proteomes/AnnotatedLong_QPH"
 annotated_files = [f for f in os.listdir(folder) if f.startswith("drosophila_") and f.endswith(".out")]
 annotated_paths = [os.path.join(folder, f) for f in os.listdir(folder) if f.startswith("drosophila_") and f.endswith(".out")]
+
+# Masked Sequences Folder
+Masked_Folder = "Proteomes/Masked_QPH_fasta"
+masked_filepaths = [os.path.join(Masked_Folder, f) for f in os.listdir(Masked_Folder) if f.startswith("drosophila_") and f.endswith(".fasta")]
 
 # folder for fasta files
 fasta_folder = "Proteomes/Drosophila"
@@ -46,9 +51,10 @@ def read_fasta_file(fasta_file):
     return sequences
 
 # Define a function to process each annotated file and return a DataFrame
-def process_annotated_file(filename, fasta_file):
+def process_annotated_file(filename, fasta_file, masked_file):
     data = []
     sequences = read_fasta_file(fasta_file)
+    masked_sequences = read_fasta_file(masked_file)
     with open(filename, "r") as file:
         lines = file.readlines()
 
@@ -72,13 +78,13 @@ def process_annotated_file(filename, fasta_file):
                     signature = re.search(r"\{(.+?)\}", columns[8]).group(1)
                     annotated_region = columns[15]
                     protein_sequence = sequences.get(sequence_name)
+                    masked_sequence = masked_sequences.get(sequence_name)
 
-                    data.append([species_name, sequence_name, sequence_length, bias_type, start_position, end_position, residue_length, signature, p_value, annotated_region, protein_sequence])
+                    data.append([species_name, sequence_name, sequence_length, bias_type, start_position, end_position, residue_length, signature, p_value, annotated_region, protein_sequence, masked_sequence])
 
-    column_names = ['Species','Sequence Name', 'Sequence Length', 'Bias Type', 'Start Position', 'End Position', 'Residue Length', 'Signature', 'P Value', 'Annotated Region', 'Protein Sequence']
+    column_names = ['Species','Sequence Name', 'Sequence Length', 'Bias Type', 'Start Position', 'End Position', 'Residue Length', 'Signature', 'P Value', 'Annotated Region', 'Protein Sequence', 'Masked Sequence']
     df = pd.DataFrame(data, columns=column_names)
     return df
-
 
 def save_filtered_data_to_excel(filter_signature, output_file):
     with pd.ExcelWriter(output_file, engine='openpyxl') as writer:
@@ -86,9 +92,10 @@ def save_filtered_data_to_excel(filter_signature, output_file):
             filepath = os.path.join(folder, annotated_file)
             species_id = annotated_file.replace("drosophila_", "").replace(".out", "")
             fasta_file = os.path.join(fasta_folder, annotated_file.replace(".out", ".fasta"))
+            masked_file = os.path.join(Masked_Folder, annotated_file.replace(".out", ".fasta"))
 
             # Process the annotated file and get a DataFrame
-            df = process_annotated_file(filepath, fasta_file)
+            df = process_annotated_file(filepath, fasta_file, masked_file)
             if not df.empty and not df[(df['Bias Type'] == 'SINGLE') | (df['Bias Type'] == 'MULTIPLE')].empty:
                 filtered_df = df[((df['Bias Type'] == 'SINGLE') | (df['Bias Type'] == 'MULTIPLE')) & (df['Signature'] == filter_signature)]
 
@@ -122,7 +129,8 @@ def create_fasta_file_for_signature(filepaths, signature, output_fasta_file):
     with open(output_fasta_file, "w") as fasta_file:
         for filepath in filepaths:
             fasta_f = os.path.join(fasta_folder, os.path.basename(filepath.replace(".out", ".fasta")))
-            df = process_annotated_file(filepath, fasta_f)
+            masked_file = os.path.join(Masked_Folder, os.path.basename(filepath.replace(".out", ".fasta")))
+            df = process_annotated_file(filepath, fasta_f, masked_file)
             signature_df = df[df['Signature'] == signature]
             for _, row in signature_df.iterrows():
                 fasta_file.write(f">{row['Sequence Name']}_{row['Start Position']}_{row['End Position']}\n")
@@ -145,6 +153,8 @@ def main(toWrite : bool, toCompare: bool):
         for species_id, positions in enumerate(qph_positions, start=1):
             print(f"Species {species_id}: {positions}")
 
+    print("##############################################")
+    print("Creating FASTA files for all Q, QH, and QPH domain sequences")
     create_fasta_file_for_signature(annotated_paths, 'QPH', 'qph_sequences.fasta')
     create_fasta_file_for_signature(annotated_paths, 'QH', 'qh_sequences.fasta')
     create_fasta_file_for_signature(annotated_paths, 'Q', "q_sequences.fasta")

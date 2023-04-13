@@ -1,0 +1,32 @@
+An example of composition file format for amino-acid sequences is shown below.
+The file should contain all 21 single-letter amino-acid codes (including X).
+
+A	0.078400
+C	0.016000
+D	0.055800
+E	0.065000
+F	0.039100
+G	0.066100
+H	0.021800
+I	0.049300
+K	0.061800
+L	0.092000
+M	0.021800
+N	0.041100
+P	0.046700
+Q	0.043300
+R	0.047900
+S	0.072100
+T	0.062000
+V	0.064900
+W	0.014900
+X	0.001500
+Y	0.037700
+An example of composition file format for nucleotide sequences is shown below:
+The file should contain all 5 single-letter nucleotide codes (including N).
+
+A	0.289000
+C	0.210000
+G	0.210000
+N	0.289000
+T	0.002000

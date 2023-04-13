@@ -3,14 +3,15 @@ import os
 
 excel_files = ['output_Q.xlsx', 'output_QH.xlsx', 'output_QPH.xlsx']
 Q_p_value_threshold = 1e-30  # Example threshold
-QH_p_value_threshold = 1e-20  # Example threshold
+QH_p_value_threshold = 1e-28  # Example threshold
 QPH_p_value_threshold = 1e-15  # Example threshold
 Q_residue_threshold = 50  # Example threshold
-QH_residue_threshold = 250  # Example threshold
+QH_residue_threshold = 150  # Example threshold
 QPH_residue_threshold = 500  # Example threshold
 
 # Create a function to filter and write proteins to a fasta file
-def write_filtered_proteins_to_fasta(output_file, signature, p_value_threshold, residue_threshold):
+def write_filtered_proteins_to_fasta(output_file, signature, p_value_threshold, residue_threshold, masked=False):
+    unique_sequences = set()  # Keep track of unique sequences
     with open(output_file, 'w') as fasta_file:
         for excel_file in excel_files:
             # Read each sheet in the Excel file
@@ -21,12 +22,22 @@ def write_filtered_proteins_to_fasta(output_file, signature, p_value_threshold, 
                     filtered_df = df[(df['Signature'] == signature) &
                                      (df['P Value'] <= p_value_threshold) &
                                      (df['Residue Length'] <= residue_threshold)]
-                    # Write filtered proteins to the fasta file
+                    # Write filtered proteins to the fasta file, avoiding duplicates
                     for _, row in filtered_df.iterrows():
-                        fasta_file.write(f">{row['Sequence Name']}_{row['Start Position']}_{row['End Position']}\n")
-                        fasta_file.write(f"{row['Protein Sequence']}\n")
+                        if masked:
+                            seq = row['Masked Sequence']
+                        if not masked:
+                            seq = row['Protein Sequence']
+                        if seq not in unique_sequences:
+                            fasta_file.write(f">{row['Sequence Name']}_{row['Start Position']}_{row['End Position']}\n")
+                            fasta_file.write(f"{seq}\n")
+                            unique_sequences.add(seq)  # Add the sequence to the set of unique sequences
+
 
 # Generate fasta files for each signature
 write_filtered_proteins_to_fasta('q_prots.fasta', 'Q', Q_p_value_threshold, Q_residue_threshold)
 write_filtered_proteins_to_fasta('qh_prots.fasta', 'QH', QH_p_value_threshold, QH_residue_threshold)
 write_filtered_proteins_to_fasta('qph_prots.fasta', 'QPH', QPH_p_value_threshold, QPH_residue_threshold)
+write_filtered_proteins_to_fasta('q_masked.fasta', 'Q', Q_p_value_threshold, Q_residue_threshold, masked=True)
+write_filtered_proteins_to_fasta('qh_masked.fasta', 'QH', QH_p_value_threshold, QH_residue_threshold, masked=True)
+write_filtered_proteins_to_fasta('qph_masked.fasta', 'QPH', QPH_p_value_threshold, QPH_residue_threshold, masked=True)
