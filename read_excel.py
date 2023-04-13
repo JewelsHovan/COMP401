@@ -3,10 +3,10 @@ import os
 
 excel_files = ['output_Q.xlsx', 'output_QH.xlsx', 'output_QPH.xlsx']
 Q_p_value_threshold = 1e-30  # Example threshold
-QH_p_value_threshold = 1e-28  # Example threshold
-QPH_p_value_threshold = 1e-15  # Example threshold
-Q_residue_threshold = 50  # Example threshold
-QH_residue_threshold = 150  # Example threshold
+QH_p_value_threshold = 1e-30  # Example threshold
+QPH_p_value_threshold = 1e-20  # Example threshold
+Q_residue_threshold = 35  # Example threshold
+QH_residue_threshold = 75  # Example threshold
 QPH_residue_threshold = 500  # Example threshold
 
 # Create a function to filter and write proteins to a fasta file
@@ -35,9 +35,9 @@ def write_filtered_proteins_to_fasta(output_file, signature, p_value_threshold, 
 
 
 # Generate fasta files for each signature
-write_filtered_proteins_to_fasta('q_prots.fasta', 'Q', Q_p_value_threshold, Q_residue_threshold)
-write_filtered_proteins_to_fasta('qh_prots.fasta', 'QH', QH_p_value_threshold, QH_residue_threshold)
-write_filtered_proteins_to_fasta('qph_prots.fasta', 'QPH', QPH_p_value_threshold, QPH_residue_threshold)
-write_filtered_proteins_to_fasta('q_masked.fasta', 'Q', Q_p_value_threshold, Q_residue_threshold, masked=True)
-write_filtered_proteins_to_fasta('qh_masked.fasta', 'QH', QH_p_value_threshold, QH_residue_threshold, masked=True)
-write_filtered_proteins_to_fasta('qph_masked.fasta', 'QPH', QPH_p_value_threshold, QPH_residue_threshold, masked=True)
+write_filtered_proteins_to_fasta('Alignments/Alignment_Fastas/q_prots.fasta', 'Q', Q_p_value_threshold, Q_residue_threshold)
+write_filtered_proteins_to_fasta('Alignments/Alignment_Fastas/qh_prots.fasta', 'QH', QH_p_value_threshold, QH_residue_threshold)
+write_filtered_proteins_to_fasta('Alignments/Alignment_Fastas/qph_prots.fasta', 'QPH', QPH_p_value_threshold, QPH_residue_threshold)
+write_filtered_proteins_to_fasta('Alignments/Alignment_Fastas/q_masked.fasta', 'Q', Q_p_value_threshold, Q_residue_threshold, masked=True)
+write_filtered_proteins_to_fasta('Alignments/Alignment_Fastas/qh_masked.fasta', 'QH', QH_p_value_threshold, QH_residue_threshold, masked=True)
+write_filtered_proteins_to_fasta('Alignments/Alignment_Fastas/qph_masked.fasta', 'QPH', QPH_p_value_threshold, QPH_residue_threshold, masked=True)
