@@ -3,11 +3,11 @@ import os
 
 excel_files = ['output_Q.xlsx', 'output_QH.xlsx', 'output_QPH.xlsx']
 Q_p_value_threshold = 1e-30  # Example threshold
-QH_p_value_threshold = 1e-30  # Example threshold
-QPH_p_value_threshold = 1e-20  # Example threshold
-Q_residue_threshold = 35  # Example threshold
-QH_residue_threshold = 75  # Example threshold
-QPH_residue_threshold = 500  # Example threshold
+QH_p_value_threshold = 1e-31  # Example threshold
+QPH_p_value_threshold = 1e-25  # Example threshold
+Q_residue_threshold = 28  # Example threshold
+QH_residue_threshold = 40  # Example threshold
+QPH_residue_threshold = 200  # Example threshold
 
 # Create a function to filter and write proteins to a fasta file
 def write_filtered_proteins_to_fasta(output_file, signature, p_value_threshold, residue_threshold, masked=False):
@@ -32,6 +32,7 @@ def write_filtered_proteins_to_fasta(output_file, signature, p_value_threshold, 
                             fasta_file.write(f">{row['Sequence Name']}_{row['Start Position']}_{row['End Position']}\n")
                             fasta_file.write(f"{seq}\n")
                             unique_sequences.add(seq)  # Add the sequence to the set of unique sequences
+    print("Finished writing to", output_file)
 
 
 # Generate fasta files for each signature
