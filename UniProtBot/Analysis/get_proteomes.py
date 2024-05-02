@@ -4,9 +4,8 @@ from bs4 import BeautifulSoup
 from contextlib import contextmanager
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.by import By
-import requests
 from time import sleep
+from security import safe_requests
 
 
 @contextmanager
@@ -45,7 +44,7 @@ def get_ref_url(entry_id, driver):
 
 def download_fasta(ref_url, download_path):
     try:
-        response = requests.get(ref_url)
+        response = safe_requests.get(ref_url)
         soup = BeautifulSoup(response.content, 'html.parser')
         links = soup.find_all('a', href=True)
         
@@ -57,7 +56,7 @@ def download_fasta(ref_url, download_path):
 
         if fasta_link is not None:
             fasta_url = ref_url + fasta_link
-            response = requests.get(fasta_url)
+            response = safe_requests.get(fasta_url)
             file_name = os.path.join(download_path, fasta_link)
             with open(file_name, 'wb') as f:
                 f.write(response.content)
