@@ -27,7 +27,7 @@ class UniProtBot:
         """Load the configuration file."""
         try:
             with open(self.config, "r") as f:
-                config_dict = yaml.load(f, Loader=yaml.FullLoader)
+                config_dict = yaml.load(f, Loader=yaml.SafeLoader)
         except Exception as e:
             print(f"Error loading config file: {str(e)}")
             config_dict = {}
@@ -72,7 +72,7 @@ class UniProtBot:
         """Returns the configuration dictionary for a specific species."""
         species_config_path = os.path.join(os.path.dirname(self.config), species_name)
         with open(f"{species_config_path}.yaml", "r") as rf:
-            species_config = yaml.load(rf, Loader=yaml.FullLoader)
+            species_config = yaml.load(rf, Loader=yaml.SafeLoader)
 
         return species_config
     
