@@ -4,6 +4,7 @@ import requests
 import time
 from Bio import AlignIO
 from Bio.Align import AlignInfo
+from security import safe_requests
 
 file_names = ['output_Q.xlsx', 'output_QH.xlsx', 'output_QPH.xlsx']
 merged_data = pd.DataFrame()
@@ -32,7 +33,7 @@ def clustal_omega_msa(sequences):
 
     # Check the job status
     while True:
-        response = requests.get(f'{base_url}/status/{job_id}')
+        response = safe_requests.get(f'{base_url}/status/{job_id}')
         status = response.text
         if status == 'RUNNING':
             time.sleep(10)
@@ -42,7 +43,7 @@ def clustal_omega_msa(sequences):
             raise Exception(f'Clustal Omega job failed with status: {status}')
 
     # Retrieve the results
-    response = requests.get(f'{base_url}/result/{job_id}/aln-fasta')
+    response = safe_requests.get(f'{base_url}/result/{job_id}/aln-fasta')
     return response.text
 
 msa_results = {}
