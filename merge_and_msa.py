@@ -27,12 +27,12 @@ def clustal_omega_msa(sequences):
 
     # Submit the job
     params = {'sequence': '\n'.join(sequences), 'email': 'your@email.com'}
-    response = requests.post(f'{base_url}/run', headers=headers, data=params)
+    response = requests.post(f'{base_url}/run', headers=headers, data=params, timeout=60)
     job_id = response.text
 
     # Check the job status
     while True:
-        response = requests.get(f'{base_url}/status/{job_id}')
+        response = requests.get(f'{base_url}/status/{job_id}', timeout=60)
         status = response.text
         if status == 'RUNNING':
             time.sleep(10)
@@ -42,7 +42,7 @@ def clustal_omega_msa(sequences):
             raise Exception(f'Clustal Omega job failed with status: {status}')
 
     # Retrieve the results
-    response = requests.get(f'{base_url}/result/{job_id}/aln-fasta')
+    response = requests.get(f'{base_url}/result/{job_id}/aln-fasta', timeout=60)
     return response.text
 
 msa_results = {}
