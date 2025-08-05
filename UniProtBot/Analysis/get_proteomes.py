@@ -45,7 +45,7 @@ def get_ref_url(entry_id, driver):
 
 def download_fasta(ref_url, download_path):
     try:
-        response = requests.get(ref_url)
+        response = requests.get(ref_url, timeout=60)
         soup = BeautifulSoup(response.content, 'html.parser')
         links = soup.find_all('a', href=True)
         
@@ -57,7 +57,7 @@ def download_fasta(ref_url, download_path):
 
         if fasta_link is not None:
             fasta_url = ref_url + fasta_link
-            response = requests.get(fasta_url)
+            response = requests.get(fasta_url, timeout=60)
             file_name = os.path.join(download_path, fasta_link)
             with open(file_name, 'wb') as f:
                 f.write(response.content)
